@@ -25,4 +25,22 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
                            
-  
+#Show a statistic about the price for items in the category of "Kitchen Supplies".
+SELECT *
+FROM SUPERSTORE
+WHERE category = "Kitchen Supplies"
+ORDER BY PRICE DESC
+
+#Shows a chart that indicates items by price going from highest to lowest
+SELECT *
+FROM SUPERSTORE
+ORDER BY PRICE DESC
+
+#Shows how much was spen in total
+SELECT SUM (PRICE) 
+FROM SUPERSTORE
+
+#Shows how many air purifiers were in stock
+SELECT SUM (stock_quantity)
+FROM SUPERSTORE
+WHERE item_name= "Air Purifier"
